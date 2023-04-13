@@ -17,7 +17,7 @@ def solution(x_success: int,
     nobs = y_cnt
     count = y_success
     value = x_success / x_cnt
-    t, pval = proportions_ztest(count, nobs, value=value, alternative='smaller')
+    t, pval = proportions_ztest(count, nobs, value=value, alternative='two-sided')
     #return t, pval
     if pval < 0.1:
         return True
